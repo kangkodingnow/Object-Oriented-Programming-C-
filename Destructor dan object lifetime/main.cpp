@@ -36,7 +36,7 @@ void membuatPlayerStackPointer(Player* &playerPointer){
 void membuatPlayerHeapPointer(Player* &playerPointer){
     Player* heapPlayer = new Player("heap");
     playerPointer = heapPlayer;
-    // delete heapPlayer;
+    delete playerPointer;
 }
 
 Player* createHeapPlayer(){
@@ -63,8 +63,8 @@ int main(int argc, char const *argv[])
     membuatPlayerHeapPointer(playerPointer2);
     cout << playerPointer2->nama << endl;//leak memory
     playerPointer2->nama = "acak-acakan";
-    delete playerPointer2;
     cout << playerPointer2->nama << endl;//leak memory
+    delete playerPointer2;
 
     cout << "\nReturn object" << endl;
     Player playerReturnStack = createStackPlayer();
@@ -74,6 +74,6 @@ int main(int argc, char const *argv[])
     cout << playerReturnHeap->nama << endl;
     delete playerReturnHeap;
 
-    
+
     return 0;
 }
