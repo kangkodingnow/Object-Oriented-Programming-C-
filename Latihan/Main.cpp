@@ -18,9 +18,17 @@ class Hero{
 
         Hero(const char* nama, double health){
             Hero::nama = nama;
-            Hero::health = health;
+            this->health = health;
+
+            //alamat dari variabel berada di stack, sedangkan isinya ada di heap
+            cout << &nama << endl;
+            cout << &health << endl;
+
+            //operator this menunjukan alamat pertama yang akan diisi oleh class
             cout << this << endl;
-            cout << (&this->nama) << endl;
+            
+            //alamat berada pada heap
+            cout << (&this->nama) << endl;//berisi alamat dari this
             cout << (&this->health) << endl;
             cout << Hero::nama << endl;
             cout << Hero::health << endl;

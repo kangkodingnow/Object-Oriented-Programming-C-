@@ -13,11 +13,9 @@ void fungsi(string *hijau){
 
 int main(int argc, char const *argv[])
 {
-    string a, b;
-    a = " saya hebat";
-    int c, d;
+    string a;
+    a = "aku bukanlah manusia biasa";
     cout << &a << endl;
-
     fungsi(&a);
 
     return 0;

@@ -15,7 +15,7 @@ class StrengthHero{
         double health;
 
     public:
-        StrengthHero(const char* name){
+        StrengthHero(string name){
             this->name = name;
             this->health = 100;
         }
