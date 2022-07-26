@@ -11,7 +11,7 @@ class Persegi{
 
     // memberikan akses seluruh attribut dan method kepada class PersegiPanjang
     friend class PersegiPanjang;
-    
+
     private:
         double sisi;
 
